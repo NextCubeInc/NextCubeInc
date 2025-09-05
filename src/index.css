@@ -2,95 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* NextCube Design System - All colors in HSL format */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* NextCube Brand Colors */
+    --background: 220 13% 12%; /* #1E1E1E - Dark background */
+    --foreground: 240 5% 96%; /* Light text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 13% 12%;
+    --card-foreground: 240 5% 96%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 13% 12%;
+    --popover-foreground: 240 5% 96%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* NextCube Primary - Blue */
+    --primary: 217 91% 60%; /* #2563EB - Tech blue */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* NextCube Secondary - Yellow accent */
+    --secondary: 48 96% 53%; /* #FACC15 - Energetic yellow */
+    --secondary-foreground: 220 13% 12%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* NextCube Success - Green */
+    --success: 142 71% 45%; /* #16A34A - Success green */
+    --success-foreground: 0 0% 100%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* NextCube Danger - Red */
+    --destructive: 0 72% 51%; /* #DC2626 - Alert red */
+    --destructive-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Neutral tones */
+    --muted: 220 14% 91%; /* #E5E7EB - Light gray */
+    --muted-foreground: 220 9% 46%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
 
-    --radius: 0.5rem;
+    --border: 220 13% 18%;
+    --input: 220 13% 18%;
+    --ring: 217 91% 60%;
 
-    --sidebar-background: 0 0% 98%;
+    --radius: 0.75rem;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* NextCube specific tokens */
+    --cube-gradient-start: 217 91% 60%; /* Blue */
+    --cube-gradient-middle: 262 83% 58%; /* Purple */
+    --cube-gradient-end: 0 72% 51%; /* Red */
+    
+    --hero-gradient: linear-gradient(135deg, 
+      hsl(var(--cube-gradient-start)), 
+      hsl(var(--cube-gradient-middle)), 
+      hsl(var(--cube-gradient-end))
+    );
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Animation variables */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.3);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Already using dark theme as default */
   }
 }
 
@@ -100,6 +76,69 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter antialiased;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Cube animations */
+  .cube-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .cube-glow {
+    background: var(--hero-gradient);
+    filter: blur(40px);
+    opacity: 0.3;
+  }
+
+  /* Geometric patterns */
+  .geometric-pattern {
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(var(--secondary) / 0.1) 0%, transparent 50%);
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-card);
+  }
+
+  /* CTA gradients */
+  .cta-primary {
+    background: hsl(var(--primary));
+    transition: var(--transition-smooth);
+  }
+
+  .cta-primary:hover {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(262 83% 58%));
+    box-shadow: var(--shadow-glow);
+  }
+
+  .cta-secondary {
+    background: hsl(var(--secondary));
+    color: hsl(var(--background));
+    transition: var(--transition-smooth);
+  }
+
+  .cta-secondary:hover {
+    background: linear-gradient(135deg, hsl(var(--secondary)), hsl(39 96% 40%));
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotateY(0deg); }
+  25% { transform: translateY(-10px) rotateY(90deg); }
+  50% { transform: translateY(0px) rotateY(180deg); }
+  75% { transform: translateY(-5px) rotateY(270deg); }
 }
