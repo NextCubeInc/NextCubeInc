@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -13,14 +14,12 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <header className="fixed inset-x-0 mx-auto w-1/2 top-7 min-w-fit z-50 bg-white/10 backdrop-blur-md border-white/30 border-[1px] rounded-full">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-hero-gradient rounded-md flex items-center justify-center">
-              <div className="w-4 h-4 border border-white/30 rounded-sm"></div>
-            </div>
+            <img src="/public/favicon.ico" alt="" className="max-h-12 min-h-8"/>
             <span className="text-xl font-bold">NextCube</span>
           </div>
 
@@ -35,6 +34,9 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
+            {/*<div className="text-[80%]">
+            <GooeyNav items={[{label: "Login", href: "#"}, {label: "Fale Conosco", href: "#"}]} particleCount={10} timeVariance={1500} particleR={100}/>
+            </div>*/}
             <Button variant="ghost" size="sm">
               Login
             </Button>

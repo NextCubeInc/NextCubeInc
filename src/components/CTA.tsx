@@ -1,42 +1,37 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageCircle } from "lucide-react";
+import Orb from './ui/Orb';
 
 const CTA = () => {
   return (
-    <section className="py-24 bg-primary relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-32 h-32 border border-white/10 rounded-2xl transform rotate-12"></div>
-        <div className="absolute top-20 right-20 w-16 h-16 bg-white/5 rounded-xl transform -rotate-12"></div>
-        <div className="absolute bottom-16 left-1/3 w-24 h-24 border border-white/10 rounded-lg transform rotate-45"></div>
-        <div className="absolute bottom-10 right-10 w-20 h-20 bg-white/5 rounded-2xl"></div>
+    <section className="py-24 bg-black relative overflow-hidden">
+      {/* Fundo Animado*/}
+      <div className='absolute inset-0'>
+        <Orb
+          hoverIntensity={2}
+          rotateOnHover={true}
+          hue={0}
+          forceHoverState={false}
+        />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Pronto para dar o próximo passo com a NextCube?
+            Pronto para dar o próximo passo?
           </h2>
           <p className="text-xl text-white/80 mb-12 max-w-2xl mx-auto">
-            Transforme sua visão em realidade com nossas soluções SaaS integradas. 
-            Vamos construir o futuro do seu negócio juntos.
+            Transforme sua visão em realidade com nossas soluções integradas. 
+            Vamos construir o futuro juntos.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button 
-              variant="secondary" 
-              size="lg"
-              className="group bg-white text-primary hover:bg-white/90 hover:scale-105 transition-all"
-            >
+            <Button className="backdrop-blur-md bg-background/40 rounded-[200px] border-white/30 border-[1px] " size='lg'>
               Começar Agora
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-primary transition-all"
-            >
+            <Button className="backdrop-blur-md bg-background/40 rounded-[200px] border-white/30 border-[1px] " size='lg'>
               <MessageCircle className="mr-2 h-5 w-5" />
               Fale com nosso time
             </Button>

@@ -28,9 +28,7 @@ const Footer = () => {
           {/* Brand section */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-hero-gradient rounded-md flex items-center justify-center">
-                <div className="w-4 h-4 border border-white/30 rounded-sm"></div>
-              </div>
+              <img src="/public/favicon.ico" alt="" className="max-h-12 min-h-8"/>
               <span className="text-xl font-bold">NextCube</span>
             </div>
             <p className="text-muted-foreground mb-6 max-w-sm">

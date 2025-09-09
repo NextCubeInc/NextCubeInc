@@ -1,7 +1,19 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Eye, Zap } from "lucide-react";
+import LogoLoop from './ui/LogoLoop';
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiShadcnui, SiSupabase } from 'react-icons/si';
 
 const About = () => {
+
+  const techLogos = [
+    { node: <SiReact />, title: "React", href: "https://react.dev" },
+    { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
+    { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
+    { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+    { node: <SiShadcnui />, title: "Tailwind CSS", href: "https://ui.shadcn.com" },
+    { node: <SiSupabase />, title: "Tailwind CSS", href: "https://supabase.com" },
+  ];
+
   const values = [
     {
       icon: Zap,
@@ -64,40 +76,47 @@ const About = () => {
               </div>
             </div>
           </div>
-
           {/* Right side - Values */}
           <div className="space-y-6">
             <h3 className="text-2xl font-bold mb-8">Nossos Valores</h3>
             {values.map((value, index) => (
-              <Card 
-                key={value.title} 
-                className="border-border/50 hover-lift"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className={`p-3 rounded-xl ${value.bgColor}`}>
-                      <value.icon className={`h-6 w-6 ${value.color}`} />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-lg font-semibold mb-2">{value.title}</h4>
-                      <p className="text-muted-foreground">{value.description}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                <Card
+                  key={value.title} 
+                  className="hover-lift"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-4">
+                        <div className={`p-3 rounded-xl ${value.bgColor}`}>
+                          <value.icon className={`h-6 w-6 ${value.color}`} />
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="text-lg font-semibold mb-2">{value.title}</h4>
+                          <p className="text-muted-foreground">{value.description}</p>
+                        </div>
+                      </div>
+                    </CardContent>  
+                </Card>
             ))}
           </div>
         </div>
-
-        {/* Geometric illustration */}
-        <div className="mt-20 flex justify-center">
-          <div className="relative">
-            <div className="w-64 h-32 bg-geometric-pattern rounded-2xl opacity-20"></div>
-            <div className="absolute top-4 left-8 w-8 h-8 bg-primary rounded-lg transform rotate-12"></div>
-            <div className="absolute top-8 right-12 w-6 h-6 bg-secondary rounded-md transform -rotate-12"></div>
-            <div className="absolute bottom-6 left-16 w-4 h-4 bg-success rounded-full"></div>
-          </div>
+        {/*PARCEIRROS*/}
+        <div className="text-center">
+        <h2 className="text-4xl font-bold mt-16">Nossas Tecnologias</h2>
+        </div>
+        <div className="mt-20">
+        <LogoLoop
+          logos={techLogos}
+          speed={90}
+          direction="right"
+          logoHeight={80}
+          gap={70}
+          pauseOnHover
+          scaleOnHover
+          fadeOut
+          fadeOutColor="#1c1c24"
+          ariaLabel="Technology partners"
+        />
         </div>
       </div>
     </section>
