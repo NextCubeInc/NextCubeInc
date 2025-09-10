@@ -14,7 +14,13 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed inset-x-0 mx-auto w-1/2 top-7 min-w-fit z-50 bg-white/10 backdrop-blur-md border-white/30 border-[1px] rounded-full">
+    <header className={`fixed inset-x-0 mx-auto w-1/2 top-7 min-w-fit z-50 sm:backdrop-blur-md border-[1px] sm:rounded-full transition-all ${
+      isMenuOpen
+        ? "backdrop-blur-md rounded-[8%]" // quando aberto
+        : "bg-white/10 rounded-full" // quando fechado
+      }`}
+    >
+
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -29,7 +35,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground text-white"
               >
                 {item.name}
               </a>
@@ -66,7 +72,7 @@ const Header = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                  className="block px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground text-white"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

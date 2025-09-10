@@ -7,15 +7,15 @@ const HeroCopy = () => {
   return (
     <section className="relative w-100% min-h-screen">
       {/* Fundo Animado*/}
-      <div className='absolute inset-0'>
+      <div className='absolute inset-0 min-h-screen'>
       <DarkVeil resolutionScale={1} speed={2}/>
       </div> 
-
+      <div className='min-h-[10rem] md:min-h-[18rem]'/>
       {/* Front Texts*/}
-      <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <div className="relative flex items-center justify-center overflow-hidden">
 
         {/* Animated Cube */}
-        <div className="absolute right-1/4 top-1/2 transform -translate-y-1/2">
+        <div className="absolute right-1/3 top-[84%] transform -translate-y-1/2 md:right-1/4 sm:top-1/2 ">
           <div className="relative">
             {/* Glow effect */}
             <div className="absolute inset-0 w-32 h-32 cube-glow cube-float"></div>
@@ -33,18 +33,21 @@ const HeroCopy = () => {
         </div>
 
         <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center max-w-3xl">
-          <TextType
-          className="text-4xl md:text-6xl font-bold mb-6 text-white color via-primary to-secondary bg-clip-text text-transparent animate-fade-in"
-            text={
-              ["Impulsionando todo o futuro em múltiplas dimensões",
-               "Inovando o futuro da tecnologia em múltiplas dimensões",
-               "Explorando o futuro da tecnologia em múltiplas dimensões",
-               "Transformando o futuro do mundo em múltiplas dimensões"]
-            }
-            pauseDuration={2500}
-            deletingSpeed={10}
-            cursorCharacter="_"
-          />
+          <div className='relative block min-h-[9rem] md:min-h-[13rem]'>
+            <TextType
+            className="text-4xl md:text-6xl font-bold mb-6 text-white bg-clip-text text-transparent animate-fade-in"
+              text={
+                ["Impulsionando todo o futuro em múltiplas dimensões",
+                "Inovando o futuro da tecnologia em múltiplas dimensões",
+                "Explorando o futuro da tecnologia em múltiplas dimensões",
+                "Transformando o futuro do mundo em múltiplas dimensões"]
+              }
+              pauseDuration={2500}
+              deletingSpeed={10}
+              cursorCharacter="_"
+            />
+          </div>
+          
         
         <p className="text-xl md:text-2xl text-slate-400 mb-8 max-w-2xl mx-auto animate-slide-up">
           A NextCube conecta tecnologia e inovação para escalar empresas digitais.
@@ -72,6 +75,7 @@ const HeroCopy = () => {
             <div className="text-3xl font-bold text-success">24/7</div>
             <div className="text-sm text-muted-foreground">Suporte</div>
           </div>
+          <div className='min-h-[15em] sm:min-h-0'/>
         </div>
       </div>
       </div>
