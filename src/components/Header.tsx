@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-
+import logo  from "@/assets/favicon.png"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +19,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <img src="/public/favicon.ico" alt="" className="max-h-12 min-h-8"/>
+            <img src={logo} alt="Logo" className="max-h-12 min-h-8"/>
             <span className="text-xl font-bold">NextCube</span>
           </div>
 

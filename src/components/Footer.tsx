@@ -1,4 +1,5 @@
 import { Linkedin, Twitter } from "lucide-react";
+import logo  from "@/assets/favicon.png"
 
 const Footer = () => {
   const links = {
@@ -28,7 +29,7 @@ const Footer = () => {
           {/* Brand section */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <img src="/public/favicon.ico" alt="" className="max-h-12 min-h-8"/>
+              <img src={logo} alt="" className="max-h-12 min-h-8"/>
               <span className="text-xl font-bold">NextCube</span>
             </div>
             <p className="text-muted-foreground mb-6 max-w-sm">
