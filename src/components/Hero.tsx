@@ -33,9 +33,9 @@ const HeroCopy = () => {
         </div>
 
         <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center max-w-3xl">
-          <div className='relative block min-h-[9rem] md:min-h-[13rem]'>
+          <div className='relative block min-h-[10.5rem] md:min-h-[13rem]'>
             <TextType
-            className="text-4xl md:text-6xl font-bold mb-6 text-white bg-clip-text text-transparent animate-fade-in"
+            className="text-[2rem] md:text-6xl font-bold mb-6 text-white bg-clip-text text-transparent animate-fade-in"
               text={
                 ["Impulsionando todo o futuro em múltiplas dimensões",
                 "Inovando o futuro da tecnologia em múltiplas dimensões",
