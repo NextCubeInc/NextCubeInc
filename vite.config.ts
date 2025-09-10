@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 const repoName = "/NextCubeInc"
 export default defineConfig(({ mode }) => ({
-  //base: repoName, 
+  base: repoName, 
   server: {
     host: "::",
     port: 8080,
