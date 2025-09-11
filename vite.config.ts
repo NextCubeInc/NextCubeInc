@@ -3,9 +3,9 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-const repoName = "/NextCubeInc"
+//const repoName = "/NextCubeInc"
 export default defineConfig(({ mode }) => ({
-  base: repoName, 
+  //base: repoName, 
   server: {
     host: "::",
     port: 8080,
@@ -21,3 +21,5 @@ export default defineConfig(({ mode }) => ({
     },
   },
 }));
+
+//"homepage":"https://nextcubeinc.github.io/NextCubeInc",
