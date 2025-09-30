@@ -107,7 +107,7 @@ const Footer = () => {
         {/* Bottom section */}
         <div className="py-6 border-t border-border flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            © 2025 NextCube Inc. — 62.675.173/0001-XX - Gabriel Ribeiro Marques Pedroso. Todos os direitos reservados.
+            © 2025 NextCube Inc. — 62.675.173/0001-67 - Gabriel Ribeiro Marques Pedroso. Todos os direitos reservados.
           </p>
           <div className="flex items-center space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
