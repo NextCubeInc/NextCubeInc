@@ -7,7 +7,7 @@ const Products = () => {
   const products = [
     {
       name: "Prisma",
-      url: "prisma.nextcubeinc.com",
+      url: "nextprisma.nextcubeinc.com",
       description: "Plataforma completa de identidade digital e analytics avançado para otimizar sua presença online.",
       icon: Pyramid,
       color: "text-purple-600",
@@ -69,6 +69,7 @@ const Products = () => {
                 variant="outline" 
                 size="sm" 
                 className="w-full group-hover:border-primary group-hover:text-primary transition-colors"
+                onClick={() => window.open(product.url, '_blank')}
               >
                 Saiba Mais
               </Button>
