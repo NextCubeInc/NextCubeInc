@@ -7,7 +7,7 @@ const Products = () => {
   const products = [
     {
       name: "Prisma",
-      url: "nextprisma.nextcubeinc.com",
+      url: "https://nextprisma.nextcubeinc.com",
       description: "Plataforma completa de identidade digital e analytics avançado para otimizar sua presença online.",
       icon: Pyramid,
       color: "text-purple-600",
