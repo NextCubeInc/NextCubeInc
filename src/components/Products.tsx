@@ -8,6 +8,7 @@ const Products = () => {
     {
       name: "Prisma",
       url: "https://nextprisma.nextcubeinc.com",
+      urlcomercial: "nextprisma.nextcubeinc.com",
       description: "Plataforma completa de identidade digital e analytics avançado para otimizar sua presença online.",
       icon: Pyramid,
       color: "text-purple-600",
@@ -15,7 +16,8 @@ const Products = () => {
     },
     {
       name: "ConnectHub",
-      url: "connecthub.nextcubeinc.com", 
+      url: "https://connecthub.nextcubeinc.com",
+      urlcomercial: "connecthub.nextcubeinc.com",
       description: "Gerenciamento de Redes Sociais, Instagram, Facebook, Pinterest, LinkedIn. Foco no seu crescimento.",
       icon: Link,
       color: "text-secondary",
@@ -23,7 +25,8 @@ const Products = () => {
     },
     {
       name: "NextCore",
-      url: "nextcore.nextcubeinc.com",
+      url: "https://nextcore.nextcubeinc.com",
+      urlcomercial: "nextcore.nextcubeinc.com",
       description: "Núcleo de gestão e APIs robustas para escalar seus produtos e serviços digitais.",
       icon: Cog,
       color: "text-success", 
@@ -58,7 +61,7 @@ const Products = () => {
               </div>
               <CardTitle className="text-xl">{product.name}</CardTitle>
               <CardDescription className="text-sm text-muted-foreground">
-                {product.url}
+                {product.urlcomercial}
               </CardDescription>
             </CardHeader>
             <CardContent>
